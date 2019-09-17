@@ -160,13 +160,13 @@ public class ThreadCavaleiros extends Thread {
 		Caminhar();
 
 		try {
-			semaforo.acquire();//inicializa o semaforo // Começa a concorrencia
+			semaforo.acquire();// inicializa o semaforo // Começa a concorrencia
 			Corredores();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}finally {//forçando continuar mesmo depois do Catch
-			
-		semaforo.release();//Continua em paralelo
+		} finally {// forçando continuar mesmo depois do Catch
+
+			semaforo.release();// Continua em paralelo
 		}
 
 	}
